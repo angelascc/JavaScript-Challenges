@@ -62,3 +62,43 @@ if (averageDolphins > averageKoalas && averageDolphins >= 100) {
 } else {
   console.log('no one wins')
 }
+
+// Switch
+const day = 'wednesday';
+
+switch (day) {
+  case 'monday':
+    console.log('plan course structure');
+    break;
+  case 'tuesday':
+    console.log('prepare theory videos');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('write the code example');
+    break;
+  case 'friday':
+    console.log('record videos');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('enjoy the weekend');
+    break;
+  default:
+    console.log('not a valid day!');
+}
+
+// IF statement
+if (day === 'monday') {
+  console.log('plan course structure')
+} else if (day === 'tuesday') {
+  console.log('prepare theory videos')
+} else if (day === 'wednesday' || day === 'thursday') {
+  console.log('write code examples')
+} else if (day === 'friday') {
+  console.log('record videos')
+} else if (day === 'saturday' || day === 'sunday') {
+  console.log('enjoy the weekend')
+} else {
+  console.log('not a valid day!')
+}
