@@ -100,3 +100,22 @@ const years = [1990, 1967, 2002, 2010, 2018];
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
+
+//add elements
+const friends = ['Michael', 'Steven', 'Peter'];
+const newLength = friends.push('Jay'); //last
+console.log(friends);
+console.log(newLength);//return length of the array
+
+const unshifted = friends.unshift('John'); //first
+console.log(friends);
+console.log(unshifted);//return length of the array
+
+//remove elements
+const popped = friends.pop(); //last
+console.log(friends);
+console.log(popped); //return the element removed
+
+const shifted = friends.shift(); //first
+console.log(friends);
+console.log(shifted); //return the element removed
