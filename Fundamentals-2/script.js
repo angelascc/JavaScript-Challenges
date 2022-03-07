@@ -19,7 +19,7 @@ function calcAge1 (birthYear) {
   return 2037 - birthYear;
 }
 
-//functiion expression
+//function expression
 const calcAge2 = function (birthYear) {
   return 2037 - birthYear;
 }
@@ -91,3 +91,12 @@ console.log(avgDolphins, avgKoalas);
 
 const winner2 = checkWinner(avgDolphins, avgKoalas);
 console.log(winner2);
+
+//array exercise
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
