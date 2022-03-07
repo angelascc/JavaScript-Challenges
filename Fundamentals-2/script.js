@@ -121,8 +121,8 @@ console.log(friends);
 console.log(shifted); //return the element removed
 
 //indexof
-console.log(friends.indexof('Steven')); //return the position
-console.log(friends.indexof('Bob')); //Bob doesn't exit -> return -1
+console.log(friends.indexOf('Steven')); //return the position
+console.log(friends.indexOf('Bob')); //Bob doesn't exit -> return -1
 
 //includes
 console.log(friends.includes('Steven')); //return a boolean
@@ -155,3 +155,25 @@ console.log(tips);
 
 const total = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2]];
 console.log(total);
+
+//object methods
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYeah: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
+  }
+};
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+
+console.log(jonas.getSummary());
