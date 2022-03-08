@@ -220,3 +220,8 @@ const higherBMI = (markBMI, johnBMI) => {
 }
 
 console.log(higherBMI(mark.bmi, john.bmi));
+
+//for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+  console.log(`lifting weights repetion ${rep}`)
+}
