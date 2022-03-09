@@ -12,6 +12,8 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.message').textContent = 'no number!';
   } else if (newNumber === number) {
     document.querySelector('.message').textContent = 'You win!';
+    document.querySelector('body').style.backgroundColor = '#EDD83D';
+    document.querySelector('.number').style.width = '30rem';
   } else if (newNumber > number) {
     console.log(score, "score");
     if (score > 1) {
