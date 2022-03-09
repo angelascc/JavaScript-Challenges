@@ -21,7 +21,22 @@ document.querySelector('.check').addEventListener('click', () => {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-  } else if (newNumber > number) {
+  } else if (newNumber !== number) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = newNumber > number ? 'too high!' : 'too low!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = 'you lost the game!';
+      document.querySelector('.score').textContent = 0;
+    }
+  }
+})
+
+
+
+/*
+  else if (newNumber > number) {
     console.log(score, "score");
     if (score > 1) {
       document.querySelector('.message').textContent = 'too high!';
@@ -38,9 +53,9 @@ document.querySelector('.check').addEventListener('click', () => {
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('.message').textContent = 'you lost the game!';
+      document.querySelector('.score').textContent = 0;
     }
-  }
-})
+*/
 
 /*
 Implement a game rest functionality, so that the player can make a new guess!
