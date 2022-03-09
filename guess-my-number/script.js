@@ -2,6 +2,8 @@
 
 let number = Math.trunc(Math.random()*20) + 1;
 let score = 20;
+let highScore = 0;
+console.log(number);
 
 document.querySelector('.check').addEventListener('click', () => {
   const newNumber = Number(document.querySelector('.guess').value);
@@ -14,6 +16,11 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.number').textContent = number;
     document.querySelector('body').style.backgroundColor = '#EDD83D';
     document.querySelector('.number').style.width = '30rem';
+
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
   } else if (newNumber > number) {
     console.log(score, "score");
     if (score > 1) {
