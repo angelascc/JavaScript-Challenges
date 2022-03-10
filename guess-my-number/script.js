@@ -4,15 +4,20 @@ let number = Math.trunc(Math.random()*20) + 1;
 let score = 20;
 let highScore = 0;
 console.log(number);
+const displayMessage = message => {
+  document.querySelector('.message').textContent = message;
+}
 
 document.querySelector('.check').addEventListener('click', () => {
   const newNumber = Number(document.querySelector('.guess').value);
   console.log(newNumber);
 
   if (!newNumber) {
-    document.querySelector('.message').textContent = 'no number!';
+    // document.querySelector('.message').textContent = 'no number!';
+    displayMessage('no number!');
   } else if (newNumber === number) {
-    document.querySelector('.message').textContent = 'You win!';
+    // document.querySelector('.message').textContent = 'You win!';
+    displayMessage('You win!');
     document.querySelector('.number').textContent = number;
     document.querySelector('body').style.backgroundColor = '#EDD83D';
     document.querySelector('.number').style.width = '30rem';
@@ -23,11 +28,13 @@ document.querySelector('.check').addEventListener('click', () => {
     }
   } else if (newNumber !== number) {
     if (score > 1) {
-      document.querySelector('.message').textContent = newNumber > number ? 'too high!' : 'too low!';
+      // document.querySelector('.message').textContent = newNumber > number ? 'too high!' : 'too low!';
+      displayMessage(newNumber > number ? 'too high!' : 'too low!');
       score--;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = 'you lost the game!';
+      // document.querySelector('.message').textContent = 'you lost the game!';
+      displayMessage('you lost the game!');
       document.querySelector('.score').textContent = 0;
     }
   }
@@ -68,7 +75,8 @@ Your tasks:
  document.querySelector('.again').addEventListener('click', () => {
    score = 20;
    number = Math.trunc(Math.random() * 20) + 1;
-   document.querySelector('.message').textContent = 'Start guessing...';
+   // document.querySelector('.message').textContent = 'Start guessing...';
+   displayMessage('Start guessing...');
    document.querySelector('.number').textContent = '?';
    document.querySelector('.score').textContent = score;
    document.querySelector('.guess').value = '';
